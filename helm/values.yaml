@@ -1,3 +1,5 @@
+
+
 global:
   imageRegistry: ""
   imagePullSecrets: []
@@ -5,7 +7,7 @@ global:
 
 
 kubeVersion: ""
-nameOverride: ""
+nameOverride: "apache-dev"
 fullnameOverride: ""
 commonLabels: {}
 commonAnnotations: {}
@@ -135,7 +137,7 @@ pdb:
   maxUnavailable: ""
 
 autoscaling:
-  enabled: true
+  enabled: false
   minReplicas: 1
   maxReplicas: 11
   targetCPU: 50
@@ -143,7 +145,7 @@ autoscaling:
 
 
 service:
-  type: NodePort
+  type: LoadBalancer
   ports:
     http: 80
     https: 443
