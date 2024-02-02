@@ -13,7 +13,7 @@ spec:
         app: web
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.14.2
+      - name: apache
+        image: bitnami/apache:2.4.58-debian-11-r9
         ports:
         - containerPort: 80
